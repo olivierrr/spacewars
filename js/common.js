@@ -32,22 +32,13 @@ var loader = {
     
     init:function(){
         // check for sound support
-        var mp3Support,oggSupport;
-        var audio = document.createElement('audio');
-        if (audio.canPlayType) {
-               // Currently canPlayType() returns: "", "maybe" or "probably" 
-              mp3Support = "" != audio.canPlayType('audio/mpeg');
-              oggSupport = "" != audio.canPlayType('audio/ogg; codecs="vorbis"');
-        } else {
-            //The audio tag is not supported
-            mp3Support = false;
-            oggSupport = false;    
+        var FORMATS = ['audio/mpeg', 'audio/ogg; codecs="vorbis'];
+        loader.soundFileExtn = FORMATS.filter(supported)[0];
+        function supported(str) {
+            var audio = document.createElement('audio');
+            // Currently canPlayType() returns: "", "maybe" or "probably" 
+            return audio.canPlayType && ("" != audio.canPlayType(str));
         }
-
-        // Check for ogg, then mp3, and finally set soundFileExtn to undefined
-        loader.soundFileExtn = oggSupport?".ogg":mp3Support?".mp3":undefined;
-        //alert('Audio Format supported '+loader.soundFileExtn);
-        
     },
     loadImage:function(url){
         this.totalCount++;
