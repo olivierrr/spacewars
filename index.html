@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<meta http-equiv="Content-type" content="text/html; charset = utf-8">
+	<title>Space Fighter v1</title>
+</head>
+<body>
+	<div id="gameContainer">
+		<div id="gamestartscreen" class="gameLayer">
+			<span id="singleplayer" onclick="singleplayer.start();">Campaign</span><br />
+			<span id="multiplayer" onclick="multiplayer.start();">Multiplayer</span><br />
+		</div>
+		<div id="missionscreen" class="gameLayer">
+			<input type="button" id="entermission" onclick="singleplayer.play();">
+			<input type="button" id="exitmission" onclick="singleplayer.exit();">
+			<div id="missionbriefing"></div>
+		</div>
+		<div id="gameinterfacescreen" class="gameLayer">
+			<div id="gamemessages"></div>
+			<div id="callerpicture"></div>
+			<div id="cash"></div>
+			<div id="sidebarbuttons"></div>
+			<canvas id="gamebackgroundcanvas" height="305" width="480"></canvas>
+			<canvas id="gameforegroundcanvas" height="305" width="480"></canvas>
+		<div id="loadingscreen" class="gameLayer">
+			<div id="loadingmessage"></div>
+		</div>
+
+		<canvas id="gameCanvas" class="gameLayer">
+			Your browser does not support HTML5 Canvas. Please use a different browser.
+		</canvas>
+		
+
+		<div id="scorescreen" class="gameLayer">
+			<span id="score">Score: 0</span>
+		</div>
+
+
+
+	</div>
+	<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript" src="js/mouse.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/game.js"></script>
+	<script type="text/javascript" src="js/maps.js"></script>
+	<script type="text/javascript" src="js/singleplayer.js"></script>
+	<script type="text/javascript" src="js/scouts.js"></script>
+</body>
+</html>

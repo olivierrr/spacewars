@@ -1,0 +1,174 @@
+#gameCanvas{
+	height: 600px;
+	width: 800px;
+	margin: auto;
+	z-index:50;
+	background-color: transparent;
+}
+
+#scoreScreen{
+	background: url('../img/nebula.png');
+}
+
+#gameContainer{
+	background: url('../img/splashscreen.png');
+	width: 800px;
+	height: 600px;
+	border: 1px solid black;
+}
+
+.gameLayer{
+	position: absolute;
+	width: 800px;
+	height: 600px;
+	display: none;
+}
+
+#gamestartscreen{
+	padding-top: 500px;
+	text-align: left;
+	padding-left: 14px;
+	width: 800px;
+	height: 160px;
+}
+
+#gamestartscreen span {
+	margin: 0px;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 37px;
+	cursor:pointer;
+	color: white;
+	text-shadow: -2px 0 purple, 0 2px purple, 2px 0 purple, 0 -2px purple;
+}
+
+#gamestartscreen span:hover{
+	color: yellow;
+}
+
+/*Loading Screen*/
+#loadingscreen{
+	background: rgba(100,100,100,0.7);
+	z-index: 10;
+}
+
+#loadingmessage {
+	margin-top: 400px;
+	text-align: center;
+	height: 48px;
+	color: white;
+	background: url('../img/loader.gif') no-repeat center;
+	font: 12px Arial;
+}
+
+#missionscreen{
+	background: url('../img/missionscreen.png');
+}
+
+#missionscreen #entermission{
+	background: transparent;
+	text-decoration: none;
+	position: absolute;
+	bottom:27px;
+	right: 120px;
+	width: 55px;
+	height:60px;
+	border-width: 0px;
+	background-image: url('../img/buttons.png');
+	background-position: -67px 0px;
+}
+
+#missionscreen #entermission:disabled, #missionscreen #entermission:active{
+	background-image: url('../img/buttons.png');
+	background-position: -10px 0px;
+}
+
+#missionscreen #exitmission{
+	text-decoration: none;
+	background: transparent;
+	position: absolute;
+	bottom: 25px;
+	right: 50px;
+	width: 55px;
+	height: 60px;
+	border-width: 0px;
+	background-image: url('../img/buttons.png');
+	background-position: -68px -76px;
+}
+
+#missionscreen #exitmission:disabled,#missionscreen #exitmission:active{
+	background-image: url('../img/buttons.png');
+	background-position: -9px -76px;
+}
+
+#missionscreen #missionbriefing {
+	position: absolute;
+	padding: 10px;
+	top: 245px;
+	left:100px;
+	width: 390px;
+	height: 300px;
+	color: rgb(40,236,27);
+	font-size: 13px;
+	font-weight: bolder;
+	font-family: 'Courier New', Courier, monospace;
+}
+
+
+/* GAME INTERFACE SCREEN */
+
+#gameinterfacescreen{
+	background: url('../img/maininterface.png') no-repeat;
+}
+
+#gameinterfacescreen #gamemessages{
+	position: absolute;
+	padding-left: 10px;
+	top: 5px;
+	left: 5px;
+	width: 450px;
+	height: 60px;
+	color: rgba(130,150,162);
+	overflow: hidden;
+	font-size: 13px;
+	font-family: 'Courier New', Courier, monospace;
+}
+
+#gameinterfacescreen #gamemessages span{
+	color: white;
+}
+
+#gameinterfacescreen #callerpicture{
+	position: absolute;
+	left: 498px;
+	top: 154px;
+	width: 126px;
+	height: 88px;
+	overflow: none;
+}
+
+#gameinterfacescreen #cash{
+	width: 120px;
+	height: 22px;
+	position: absolute;
+	left: 498px;
+	top: 256px;
+	color: rgb(130,150,162);
+	overflow: hidden;
+	font-family: 13px;
+	font-family: 'Courier New', Courier, monospace;
+	text-align: right;
+}
+
+#gameinterfacescreen canvas{
+	position: absolute;
+	top: 233px;
+	left: 64px;
+}
+
+#gameinterfacescreen #foregroundcanvas{
+	z-index: 15;
+}
+
+#gameinterfacescreen #backgroundcanvas{
+	z-index: 0;
+}
